@@ -1,0 +1,61 @@
+<dom-module id="nipeti-card">
+    <template>
+        <style>
+            :host {
+                background: #fff;
+                box-shadow: 0 1px 5px 0px #aaa;
+                display: flex;
+                font-family: 'Roboto', sans-serif;                
+                padding: 1rem;
+            }
+
+            img{
+                opacity: 0.3;
+                max-height: 26px;
+                max-width: 26px;
+            }
+
+            img.favorito{
+                opacity: 1;
+            }
+
+            ::slotted(p) {
+                flex: 1;
+                line-height: 1.6;
+                padding: 0 20px;
+            }
+
+            ::slotted(img) {
+                max-width: 100px;
+                max-height: 100px;
+            }
+        </style>
+
+        <slot></slot>        
+        
+        <img on-click="alternarEstado" class$="{{favorito}}" src="img/star.svg"></iron-icon>   
+    </template>
+    <script>
+        class NipetiCard extends Polymer.Element{
+            static get is(){
+                return 'nipeti-card';
+            }
+
+            static get properties(){
+                return {
+                    favorito: { type: String, value: '' }
+                }
+            }
+
+            alternarEstado(evt){
+                if (!this.favorito){
+                    this.favorito = 'favorito';
+                } else {
+                    this.favorito = '';
+                }                
+            }
+        }
+
+        customElements.define(NipetiCard.is, NipetiCard);
+    </script>
+</dom-module>

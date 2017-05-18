@@ -1,0 +1,27 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../nipeti-card/nipeti-card.html">
+
+<dom-module id="exemplo-workshop-gpca-nipeti-app">
+  <template>
+    <style>
+      :host {
+        display: block;        
+      }
+    </style>
+
+    <nipeti-card id="card"> 
+      <img src="img/profile-assets/profile.png" alt="Evandro Falleiros" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam delectus nemo dolor dolores quos fugit tempore ab inventore odio totam rem provident reprehenderit ipsa autem perspiciatis, minus adipisci illo quia.</p>
+    </nipeti-card>    
+  </template>
+
+  <script>
+    /** @polymerElement */
+    class ExemploWorkshopGpcaNipetiApp extends Polymer.Element {
+      static get is() { return 'exemplo-workshop-gpca-nipeti-app'; }
+      static get properties() { }
+    }
+
+    window.customElements.define(ExemploWorkshopGpcaNipetiApp.is, ExemploWorkshopGpcaNipetiApp);
+  </script>
+</dom-module>

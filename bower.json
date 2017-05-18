@@ -1,0 +1,13 @@
+{
+  "name": "exemplo-workshop-gpca-nipeti",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0-rc.3",
+    "iron-icon": "PolymerElements/iron-icon#^2.0.0",
+    "iron-iconset": "PolymerElements/iron-iconset#^2.0.0"
+  },
+  "devDependencies": {
+    "web-component-tester": "^6.0.0-prerelease.5",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0-rc.7"
+  }
+}
